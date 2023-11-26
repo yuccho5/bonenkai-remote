@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+  <DinosaurAnimation />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DinosaurAnimation from './components/DinosaurAnimation.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DinosaurAnimation
   }
 }
 </script>
@@ -24,3 +24,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+
