@@ -1,16 +1,37 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <DinosaurAnimation />
+  <div>
+    <DinosaurAnimation v-if="currentStep === 1" @start="handleStart" />
+    <DinosaurOpensMouth v-if="currentStep === 2" />
+    <EggRollsAndGlows v-if="currentStep === 3" />
+    <ProductAppears v-if="currentStep === 4" />
+  </div>
 </template>
 
 <script>
-import DinosaurAnimation from './components/DinosaurAnimation.vue'
+import DinosaurAnimation from './components/DinosaurAnimation.vue';
+import DinosaurOpensMouth from './components/DinosaurOpensMouth.vue';
+import EggRollsAndGlows from './components/EggRollsAndGlows.vue';
+import ProductAppears from './components/ProductAppears.vue';
 
 export default {
   name: 'App',
   components: {
-    DinosaurAnimation
-  }
+    DinosaurAnimation,
+    DinosaurOpensMouth,
+    EggRollsAndGlows,
+    ProductAppears
+  },
+  data() {
+    return {
+      currentStep: 1 // 現在のステップを追加
+    };
+  },
+  methods: {
+    // スタートハンドルの実装
+    handleStart() {
+      this.currentStep += 1; // 次のステップに進む
+    }
+  }      
 }
 </script>
 
@@ -24,4 +45,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-

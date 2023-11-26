@@ -1,11 +1,8 @@
 <template>
   <div class="animation-container">
     <!--<img class="background" src="@/assets/sky-background.png"> -->
-    <img class="dinosaur" src="@/assets/dinosaur.png">
-    <img class="lower-jaw" src="@/assets/dinosaur-lower-jaw.png">
-    <img class="egg" v-show="isEggVisible" :style="eggStyle" src="@/assets/egg.png">
-    <!--<img class="product" v-show="isProductVisible" src="@/assets/product.png"> -->
-    <button class="start-button" v-if="!isAnimationStarted" @click="startAnimation">ガチャる</button>
+    <img class="dinosaur" src="@/assets/dinosaur.png"> 
+    <button class="start-button" v-if="!isAnimationStarted" @click="onStartClick">ガチャる</button>
   </div>
 </template>
 
@@ -19,19 +16,10 @@ export default {
       isAnimationStarted: false,
     };
   },
+
   methods: {
-    startAnimation() {
-      this.isAnimationStarted = true;
-      setTimeout(() => {
-        this.isEggVisible = true;
-        this.eggStyle.top = 'falling position'; // 卵が落ちるアニメーション
-        setTimeout(() => {
-          this.isProductVisible = true; // 商品画像の表示
-        }, 2000); // 卵が落ちてから商品画像が表示されるまでの時間
-      }, 2000); // 口が開いてから卵が表示されるまでの時間
-    },
-    resetAnimation() {
-      // アニメーションをリセットするメソッド
+    onStartClick() {
+      this.$emit('start'); // 親コンポーネントに通知
     }
   }
 };
@@ -57,7 +45,22 @@ export default {
   position: absolute; /* 絶対位置指定 */
   left: 15%; /* 画面の左側からの位置 */
   bottom: 30%; /* 画面の下側からの位置 */
+  /* animation: shake 0.5s ease infinite; /* アニメーションを適用 */
 }
+
+/* 揺れるアニメーションの定義 */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
 
 .start-button:hover {
   background-color: darkred; /* ホバー時の背景色 */
@@ -68,17 +71,5 @@ export default {
   bottom: 15%; /* 位置を調整 */
   width: 60%; /* 画像のサイズを調整 */
 }
-.lower-jaw {
-  position: absolute;
-  right: 20%; /* 位置を調整 */
-  bottom: 60%; /* 位置を調整 */
-  width: 60%; /* 画像のサイズを調整 */
-  transform: translateY(100%); /* 口を適切に位置させる */
-}
-.egg {
-  position: absolute;
-  right: 20%; /* 位置を調整 */
-  bottom: 20%; /* 位置を調整 */
-  width: 10%; /* 画像のサイズを調整 */
-}
+
 </style>
