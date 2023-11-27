@@ -29,9 +29,11 @@ export default {
   methods: {
     // スタートハンドルの実装
     handleStart() {
-      this.currentStep += 1; // 次のステップに進む
-    }
-  }      
+      if (this.currentStep < 4) {
+        this.currentStep += 1; // 次のステップに進む
+     }
+    } 
+  }     
 }
 </script>
 

@@ -8,14 +8,14 @@
 
 <script>
 export default {
-  data() {
+  /*data() {
     return {
       isEggVisible: false,
-      eggStyle: { top: 'initial position' }, // 初期位置
+      eggStyle: { top: 'initial position' }, 
       isProductVisible: false,
       isAnimationStarted: false,
     };
-  },
+  },*/
 
   methods: {
     onStartClick() {
