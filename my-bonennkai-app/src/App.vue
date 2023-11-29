@@ -1,16 +1,14 @@
 <template>
-  <div>
+  <div id="app" :class="{ 'fade-out': isFadingOut }">
     <DinosaurAnimation v-if="currentStep === 1" @start="handleStart" />
-    <DinosaurOpensMouth v-if="currentStep === 2" />
-    <EggRollsAndGlows v-if="currentStep === 3" />
-    <ProductAppears v-if="currentStep === 4" />
+    <DinosaurOpensMouth v-if="currentStep === 2" @animation-finished="handleAnimationFinished" />
+    <ProductAppears v-if="currentStep === 3" @click-on-product="handleProductClick" />
   </div>
 </template>
 
 <script>
 import DinosaurAnimation from './components/DinosaurAnimation.vue';
 import DinosaurOpensMouth from './components/DinosaurOpensMouth.vue';
-import EggRollsAndGlows from './components/EggRollsAndGlows.vue';
 import ProductAppears from './components/ProductAppears.vue';
 
 export default {
@@ -18,23 +16,33 @@ export default {
   components: {
     DinosaurAnimation,
     DinosaurOpensMouth,
-    EggRollsAndGlows,
     ProductAppears
   },
   data() {
     return {
-      currentStep: 1 // 現在のステップを追加
+      currentStep: 1,
+      isFadingOut: false, // フェードアウトの状態
     };
   },
   methods: {
-    // スタートハンドルの実装
-    handleStart() {
-      if (this.currentStep < 4) {
-        this.currentStep += 1; // 次のステップに進む
-     }
-    } 
-  }     
-}
+      handleStart() {
+      // スタートボタンが押されたらステップ2に進む
+      this.currentStep = 2;
+      },
+      handleAnimationFinished() {
+          // アニメーションが完了したらステップ3に進む
+        this.isFadingOut = true;
+        setTimeout(() => {
+          this.isFadingOut = false;
+          this.currentStep = 3;
+        }, 400); // フェードアウトの持続時間
+      },
+      handleProductClick() {
+      // 商品画像がクリックされたら最初のステップに戻る
+      this.currentStep = 1;
+      }
+   }
+};
 </script>
 
 <style>

@@ -1,53 +1,66 @@
 <template>
-  <div class="animation-container">
-    <!--<img class="background" src="@/assets/sky-background.png"> -->
-    <!--<img class="product" v-show="isProductVisible" src="@/assets/product.png">-->
+  <div class="product-container" @click="notifyParent">
+    <div class="product-background"></div>
+    <img class="product-image" src="@/assets/jiang_SSR.png"> <!-- 商品画像のパスを指定 -->
+    <div class="sparkle-effect"></div>
   </div>
 </template>
 
 <script>
-/*
 export default {
-  data() {
-    return {
-      isEggVisible: false,
-      eggStyle: { top: 'initial position' }, // 初期位置
-      isProductVisible: false,
-      isAnimationStarted: false,
-    };
-  },
   methods: {
-    startAnimation() {
-      this.isAnimationStarted = true;
-      setTimeout(() => {
-        this.isEggVisible = true;
-        this.eggStyle.top = 'falling position'; // 卵が落ちるアニメーション
-        setTimeout(() => {
-          this.isProductVisible = true; // 商品画像の表示
-        }, 2000); // 卵が落ちてから商品画像が表示されるまでの時間
-      }, 2000); // 口が開いてから卵が表示されるまでの時間
-    },
-    resetAnimation() {
-      // アニメーションをリセットするメソッド
+    notifyParent() {
+      // 親コンポーネントに通知
+      this.$emit('click-on-product');
     }
   }
 };
-*/
 </script>
 
 <style scoped>
-.animation-container {
+.product-container {
   position: relative;
-  width: 100%; /* コンテナの幅を指定 */
-  height: 100vh; /* コンテナの高さを指定 */
-  overflow: hidden; /* コンテナ外の要素を非表示にする */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* 背景を暗くする */
 }
 
-.dinosaur {
+.product-image {
+  z-index: 2; /* 背景より前面に表示 */
+  max-width: 80%; /* 画像の最大幅を設定 */
+  max-height: 80%; /* 画像の最大高さを設定 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 光る影を追加 */
+  opacity: 0; /* 初期状態では不透明 */
+  transform: translateY(-100px); /* 初期状態では下に少しオフセット */
+  animation: fadeInUp 2.0s ease forwards; /* フェードインと上への移動 */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}  
+
+.sparkle-effect {
   position: absolute;
-  right: 15%; /* 位置を調整 */
-  bottom: 15%; /* 位置を調整 */
-  width: 60%; /* 画像のサイズを調整 */
+  width: 100%;
+  height: 100%;
+  background: none;
+  pointer-events: none;
+  animation: sparkle 2s infinite; /* キラキラ効果のアニメーションを追加 */
 }
 
+/* キラキラ効果のアニメーション */
+@keyframes sparkle {
+  0%, 100% {
+    background: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
 </style>
