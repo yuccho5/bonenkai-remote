@@ -1,7 +1,7 @@
 <template>
   <div class="product-container" @click="notifyParent">
     <div class="product-background"></div>
-    <img class="product-image" src="@/assets/jiang_SSR.png"> <!-- 商品画像のパスを指定 -->
+    <img class="product-image" src="@/assets/kei_SR.png"> <!-- 商品画像のパスを指定 -->
     <div class="sparkle-effect"></div>
   </div>
 </template>
