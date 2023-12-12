@@ -8,14 +8,11 @@
 
 <script>
 export default {
-  /*data() {
+  data() {
     return {
-      isEggVisible: false,
-      eggStyle: { top: 'initial position' }, 
-      isProductVisible: false,
       isAnimationStarted: false,
     };
-  },*/
+  },
 
   methods: {
     onStartClick() {
@@ -26,7 +23,6 @@ export default {
 </script>
 
 <style scoped>
-
 .animation-container {
   position: relative;
   width: 100%; /* コンテナの幅を指定 */
@@ -35,11 +31,11 @@ export default {
 }
 
 .background {
-  position: fixed; /* 画面に固定されるように設定 */
-  right: 0; /* 上端から0の位置に設定 */
-  bottom: 0; /* 左端から0の位置に設定 */
-  width: 100vw; /* 背景画像の幅をビューポート幅に設定 */
-  height: 100vh; /* 背景画像の高さをビューポート高さに設定 */
+  position: absolute; /* 画面に固定される代わりにコンテナ内で絶対位置を指定 */
+  top: 0; /* コンテナの上端から配置 */
+  left: 0; /* コンテナの左端から配置 */
+  width: 100%; /* コンテナの幅に合わせる */
+  height: 100%; /* コンテナの高さに合わせる */
   z-index: 1; /* 背景を他の要素よりも背面に表示 */
 }
 
@@ -82,6 +78,38 @@ export default {
   bottom: 15%; /* 位置を調整 */
   width: 60%; /* 画像のサイズを調整 */
   z-index: 3; /* 背景よりも背面に表示 */
+}
+
+/* 画面サイズが小さいときのスタイル */
+@media (max-width: 768px) {
+  .start-button {
+    font-size: 20px; /* フォントサイズを小さく */
+    padding: 15px 30px; /* パディングを小さく */
+    left: 10%; /* 位置を調整 */
+    bottom: 20%; /* 位置を調整 */
+  }
+
+  .dinosaur {
+    width: 60%; /* 画像のサイズを小さく */
+    right: 0; /* 位置を調整 */
+    bottom: 10%; /* 位置を調整 */
+  }
+}
+
+/* さらに画面サイズが小さいときのスタイル */
+@media (max-width: 480px) {
+  .start-button {
+    font-size: 15px; /* フォントサイズをさらに小さく */
+    padding: 10px 20px; /* パディングをさらに小さく */
+    left: 5%; /* 位置を調整 */
+    bottom: 10%; /* 位置を調整 */
+  }
+
+  .dinosaur {
+    width: 60%; /* 画像のサイズをさらに小さく */
+    right: 0; /* 位置を調整 */
+    bottom: 5%; /* 位置を調整 */
+  }
 }
 
 </style>

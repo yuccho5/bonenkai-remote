@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "eggColor": "egg_gold.png",
+      "imagePath": "SSR_card.png",
+      "description": "金色の卵から現れる超豪華な商品"
+    },
+
+    {
+        "id": 2,
+        "eggColor": "egg_gold.png",
+        "imagePath": "SR_card.png",
+        "description": "金色の卵から現れる豪華な商品"
+    },
+
+    {
+      "id": 3,
+      "eggColor": "egg_sliver.png",
+      "imagePath": "R_card.png",
+      "description": "銀色の卵から現れるスタイリッシュな商品"
+    },
+
+    {
+      "id": 4,
+      "eggColor": "egg.png",
+      "imagePath": "N_card.png",
+      "description": "白色の卵から現れるシンプルな商品"
+    }
+]

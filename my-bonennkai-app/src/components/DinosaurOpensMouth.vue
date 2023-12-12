@@ -3,9 +3,9 @@
       <div class="animation-container">
         <img class="background" src="@/assets/gold_small.png">
         <img class="lower-jaw" :class="{ 'dinosaur-jaw-open': isJawOpen }" src="@/assets/dinosaur-lower-jaw.png">
-        <img class="non-mouth" src="@\assets\dinosaur-non-mouth.png">
-        <img class="egg" v-show="isEggVisible" :class="{ 'egg-visible': isEggRotating }"  src="@/assets/egg.png">    
-      </div>
+        <img class="non-mouth" src="@/assets/dinosaur-non-mouth.png">
+        <img class="egg" v-if="eggImagePath" :src="eggImagePath" :class="{ 'egg-visible': isEggRotating }">
+     </div>
       <div class="sparkle-effect"></div>
   </div>
 </template>
@@ -14,34 +14,40 @@
 import anime from 'animejs';
 
 export default {
+  props: {
+    eggImagePath: String // 卵の画像のパス
+  },
   data() {
     return {
       isJawOpen: false,
       isEggVisible: false, // 卵が見えるかどうか
-     // isEggRotating: false,  卵が回転するかどうか
+      isEggRotating: false, // 卵が回転するかどうか
     };
   },
   mounted() {
     // Vue コンポーネントの this を保存
-    
+    // this.nextEgg(); // 口を開く前に次の卵の色に切り替え
+
        // 少し時間を置いてから口を開く
     setTimeout(() => {
       this.openJaw();
       setTimeout(() => {
-        this.showEgg();
-      }, 500); // 口が開いてから500ミリ秒後に卵を表示
+        this.showEgg();        
+      }, 600); // 口が開いてから500ミリ秒後に卵を表示
     }, 200); // 200ミリ秒後に口を開く
   },
 
   methods: {
-    openJaw() {
+    openJaw() {      
       // 口を開く処理
       this.isJawOpen = true;
     },
     showEgg() {
       this.isEggVisible = true;
+      this.isEggRotating = true;
       this.startEggAnimation();
     },
+
     startEggAnimation() {
         // eslint-disable-next-line no-unused-vars
       const vm = this;
@@ -94,7 +100,7 @@ export default {
 }
 
 .background {
-  position: fixed; /* 画面に固定されるように設定 */
+  position: absolute;  /* 画面に固定されるように設定 */
   right: 0; /* 上端から0の位置に設定 */
   bottom: 0; /* 左端から0の位置に設定 */
   width: 100vw; /* 背景画像の幅をビューポート幅に設定 */
