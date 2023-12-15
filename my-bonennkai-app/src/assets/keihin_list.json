@@ -1,29 +1,254 @@
 [
     {
-      "id": 1,
-      "eggColor": "egg_gold.png",
-      "imagePath": "SSR_card.png",
-      "description": "金色の卵から現れる超豪華な商品"
+        "id": 1,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_light.png",
+        "description": "㉒卓上ライト"
     },
 
     {
         "id": 2,
-        "eggColor": "egg_gold.png",
-        "imagePath": "SR_card.png",
-        "description": "金色の卵から現れる豪華な商品"
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_amazon_card_white_porch.png",
+        "description": "アマゾンギフトカード"
     },
 
     {
-      "id": 3,
-      "eggColor": "egg_sliver.png",
-      "imagePath": "R_card.png",
-      "description": "銀色の卵から現れるスタイリッシュな商品"
+        "id": 3,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_Sweets.png",
+        "description": "お菓子セット"
     },
 
     {
-      "id": 4,
-      "eggColor": "egg.png",
-      "imagePath": "N_card.png",
-      "description": "白色の卵から現れるシンプルな商品"
+        "id": 4,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tea_crown.png",
+        "description": "紅茶セット"
+    },
+
+    {
+        "id": 5,
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/SR_muffler_black.png",
+        "description": "マフラー（黒）"
+    },
+
+    {
+        "id": 6,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_towel_white.png",
+        "description": "育てるタオル（白）"
+    },
+
+    {
+        "id": 7,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tumbler.png",
+        "description": "タンブラー"
+    },
+
+    {
+        "id": 8,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_earphone.png",
+        "description": "ワイヤレスイヤホン"
+    },
+
+    {
+        "id": 9,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_amazon_card_white_porch.png",
+        "description": "アマゾンギフトカード"
+    },
+
+    {
+        "id": 10,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_loudspeaker.png",
+        "description": "スピーカー"
+    },
+
+    {
+        "id": 11,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_Sweets.png",
+        "description": "お菓子セット"
+    },
+
+    {
+        "id": 12,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_cushion_beige.png",
+        "description": "マッサージクッション（ベージュ）"
+    },
+
+    {
+        "id": 13,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tea_musibi.png",
+        "description": "緑茶セット"
+    },
+
+    {
+        "id": 14,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_light.png",
+        "description": "卓上ライト"
+    },
+
+    {
+        "id": 15,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_humidifier.png",
+        "description": "卓上加湿器"
+    },
+
+    {
+        "id": 16,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_Sweets.png",
+        "description": "お菓子セット"
+    },
+
+    {
+        "id": 17,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_towel_grey.png",
+        "description": "育てるタオル（グレー）"
+    },
+
+    {
+        "id": 18,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_amazon_card_white_porch.png",
+        "description": "アマゾンギフトカード"
+    },
+
+    {
+        "id": 19,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_Sweets.png",
+        "description": "お菓子セット"
+    },
+
+    {
+        "id": 20,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tea_Rooibos.png",
+        "description": "ルイボスティーセット"
+    },
+
+    {
+        "id": 21,
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/SR_Carbonated-water.png",
+        "description": "炭酸水メーカー"
+    },
+
+    {
+        "id": 22,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_cushion_black.png",
+        "description": "マッサージクッション（黒）"
+    },
+
+    {
+        "id": 23,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tumbler.png",
+        "description": "タンブラー"
+    },
+
+    {
+        "id": 24,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_amazon_card_white_porch.png",
+        "description": "アマゾンギフトカード"
+    },
+
+    {
+        "id": 25,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tea_nukumori.png",
+        "description": "烏龍茶セット"
+    },
+
+    {
+        "id": 26,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_Sweets.png",
+        "description": "お菓子セット"
+    },
+
+    {
+        "id": 27,
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/SR_muffler_grey.png",
+        "description": "マフラー（グレー）"
+    },
+
+    {
+        "id": 28,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_Charger.png",
+        "description": "目覚まし充電器"
+    },
+
+    {
+        "id": 29,
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/SR_Carbonated-water.png",
+        "description": "炭酸水メーカー"
+    },
+  
+    {
+      "id": 30,
+      "eggColor": "egg/egg_gold.png",
+      "imagePath": "SSR_card/SSR_Este.png",
+      "description": "目元エステ"
+    },
+
+    {
+        "id": 31,
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/R_amazon_card_white_porch.png",
+        "description": "アマゾンギフトカード"
+    },
+
+    {
+        "id": 32,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_tea_tsukiakari.png",
+        "description": "紅茶セット"
+    },
+
+    {
+        "id": 33,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_light.png",
+        "description": "卓上ライト"
+    },
+
+    {
+        "id": 34,
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/N_towel_brown.png",
+        "description": "育てるタオル（茶）"
+    },
+  
+    {
+        "id": 35,
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/SR_Shower-head.png",
+        "description": "シャワーヘッド"
+    },   
+
+    {
+      "id": 36,
+      "eggColor": "egg/egg.png",
+      "imagePath": "N_card/N_humidifier.png",
+      "description": "卓上加湿器"
     }
+
 ]

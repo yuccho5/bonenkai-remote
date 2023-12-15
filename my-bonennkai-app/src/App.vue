@@ -7,7 +7,8 @@
                          <!-- @changeEgg="handleChangeEgg" -->
     <ProductAppears v-if="currentStep === 3" 
                     :selectedProduct="selectedProduct"
-                    @click-on-product="handleProductClick" />
+                    @click-on-product="handleCloseProduct" 
+                  />
   </div>
 </template>
 
@@ -85,19 +86,11 @@ export default {
       
 
       handleStart() {
-        // アニメーション開始時に次のアイテムIDを更新し、選択
-        this.currentItemId = (this.currentItemId % this.items.length) + 1;
+        // アニメーション開始時に現在のアイテムを選択
         this.selectItem(this.currentItemId);
         // ステップ2に進む
         this.currentStep = 2;
       },
-
-      // handleChangeEgg() {
-      // // 現在のアイテムIDを次のIDに更新
-      // this.currentItemId = (this.currentItemId % 4) + 1;
-      // // 更新されたIDに基づいてアイテムを選択
-      // this.selectItem(this.currentItemId);
-      // },
 
       handleAnimationFinished() {
         // アニメーション完了時の処理
@@ -107,6 +100,9 @@ export default {
       },
       
       handleProceedToNextStep() {
+
+        //次のアイテムIDを更新
+        this.currentItemId = (this.currentItemId % this.items.length) + 1;
         // ステップ3に進む処理                        
         this.isFadingOut = true;
         setTimeout(() => {
@@ -115,10 +111,14 @@ export default {
         }, 400); // フェードアウトの持続時間
       },
 
-      handleProductClick() {
-      // 商品画像がクリックされたら最初のステップに戻る
+      // handleProductClick() {
+      // // 商品画像がクリックされたら最初のステップに戻る
+      // this.currentStep = 1;
+      // }
+      handleCloseProduct() {
+      // 最初のステップに戻る
       this.currentStep = 1;
-      }
+    }
    }
 };
 </script>

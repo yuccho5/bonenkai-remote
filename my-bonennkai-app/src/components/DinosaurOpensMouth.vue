@@ -1,10 +1,13 @@
 <template>
   <div class="root-container">
       <div class="animation-container">
-        <img class="background" src="@/assets/gold_small.png">
-        <img class="lower-jaw" :class="{ 'dinosaur-jaw-open': isJawOpen }" src="@/assets/dinosaur-lower-jaw.png">
-        <img class="non-mouth" src="@/assets/dinosaur-non-mouth.png">
-        <img class="egg" v-if="eggImagePath" :src="eggImagePath" :class="{ 'egg-visible': isEggRotating }">
+        <img class="background" src="@/assets/china_red.png">
+        <div class="dinosaur-container">
+          <img class="lower-jaw" :class="{ 'dinosaur-jaw-open': isJawOpen }" src="@/assets/dinosaur/dinosaur-lower-jaw.png">
+          <img class="non-mouth" src="@/assets/dinosaur/dinosaur-non-mouth2.png">
+          <img class="egg" v-if="eggImagePath" :src="eggImagePath" :class="{ 'egg-visible': isEggRotating }">
+        </div>
+        
      </div>
       <div class="sparkle-effect"></div>
   </div>
@@ -33,7 +36,7 @@ export default {
       this.openJaw();
       setTimeout(() => {
         this.showEgg();        
-      }, 600); // 口が開いてから500ミリ秒後に卵を表示
+      }, 200); // 口が開いてから500ミリ秒後に卵を表示
     }, 200); // 200ミリ秒後に口を開く
   },
 
@@ -54,17 +57,19 @@ export default {
       anime({
         targets: '.egg',
         translateX:[ 
-         { value: -360, duration: 1500, easing: 'easeInOutQuad' } //  
+         { value: '-35vw', duration: 2250, easing: 'easeInOutQuad' } //  
         ],
         translateY: [
-         { value: -50, duration: 700, easing: 'easeInOutQuad' },
-         { value: 200, duration: 800, easing: 'easeInOutQuad' } // 最初に上に飛び出す
+         { value: '-5vh', duration: 1000, easing: 'easeInOutQuad' },
+         { value: '25vh', duration: 1250, easing: 'easeInOutQuad' } // 最初に上に飛び出す
         // { value: 170, duration: 200, easing: 'easeOutCubic' },
         // { value: 200, duration: 150, easing: 'linear' }
         ],
         scale: [
          { value: 1.5, duration: 500, easing: 'linear' },
-         { value: 3, duration: 1000, easing: 'linear' }     // 元のサイズに戻る
+         { value: 2.5, duration: 750, easing: 'linear' },
+         { value: 3.8, duration: 1000, easing: 'linear' }
+         // 元のサイズに戻る
         ],
        
         /*rotate: {
@@ -107,20 +112,27 @@ export default {
   height: 100vh; /* 背景画像の高さをビューポート高さに設定 */
   z-index: 1; /* 背景を他の要素よりも背面に表示 */
 }
-.non-mouth {
+
+.dinosaur-container {
   position: absolute;
-  width: 50vw; /* 画像のサイズを調整 */
-  z-index: 2;
+  right: -5%; /* 位置を調整 */
+  bottom: 14.5%; /* 位置を調整 */
+  width: 57vw; /* コンテナの幅をビューポート幅の60%に設定 */
+  z-index: 4; /* z-indexを調整 */
 }
 
+.non-mouth {
+  width: 100%; /* コンテナの幅に合わせる */
+  height: auto; /* 高さを自動調整 */
+}
+
+
 .lower-jaw {
+  right: 32.0%; /* 位置を調整 */
+  bottom: 44.2%; /* 位置を調整 */
+  width: 42.5vw; /* コンテナの幅をビューポート幅の60%に設定 */
   position: absolute;
-  right: 16.0vw; /* 画面幅の20%分右から離れる */
-  bottom: 59.0vh; /* 画面高さの10%分下から離れる */
-  width: 36.5vw; /* 画像のサイズを調整 */
-  z-index: 5; /* 下口の画像を前面に表示 */
-  transform-origin: 60% 40%; 
-  /*transition: transform 1.0s ease;  アニメーションの速度とイージング */
+  transform-origin: 60% 40%;
 }
 
 /* アニメーションがアクティブな状態 */
@@ -131,11 +143,15 @@ export default {
 .egg {
   position: absolute;
   width: 13vw; /* 卵の画像の幅をビューポート幅の10%に設定 */
-  right: 35vw; /* 画面幅の20%分右から離れる */
-  bottom: 58vh; /* 画面高さの10%分下から離れる */
-  opacity: 1; /* 初期状態では見えない */
+  right: 60%; /* 画面幅の20%分右から離れる */
+  bottom: 58%; /* 画面高さの10%分下から離れる */
+  opacity: 0; /* 初期状態では見えない */
   z-index: 10; /* 他の要素よりも前面に表示 */
-  /* transition:transform 2s;  透明度と変形のアニメーション設定 */
+  transition: opacity 0.5s ease; /* 卵の透明度の変化にアニメーションを適用 */
+}
+
+.egg-visible {
+  opacity: 1; /* 卵が見える状態 */
 }
 
 @media (max-width: 600px) {

@@ -1,8 +1,8 @@
 <template>
   <div class="animation-container">
-    <img class="background" src="@/assets/gold_small.png">
-    <img class="dinosaur" src="@/assets/dinosaur.png"> 
-    <button class="start-button" v-if="!isAnimationStarted" @click="onStartClick">ガチャる</button>
+    <img class="background" src="@/assets/china_red.png">
+    <img class="dinosaur" src="@/assets/dinosaur/dinosaur.png"> 
+    <button class="start-button" v-if="!isAnimationStarted" @click="onStartClick">抽卡</button>
   </div>
 </template>
 
@@ -39,20 +39,33 @@ export default {
   z-index: 1; /* 背景を他の要素よりも背面に表示 */
 }
 
-.start-button {
-  background-color: red; /* ボタンの背景色 */
-  color: white; /* ボタンのテキスト色 */
-  border: 2px solid gold; /* 金色の縁 */
+.start-button {  
+  color: red; /* ボタンのテキスト色 */
+  border: 2px solid black; /* 金色の縁 */
+  font-family: 'Sawarabi Mincho', sans-serif; /* Sawarabi Mincho フォントを適用 */
+  font-size: 8.0em; /* フォントサイズを現在の2倍に設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* 黒い輪郭を設定 */
+
+  background-color: #FFD700; /* ボタンの背景色 */
+  background-image: linear-gradient(to top, #FFD700, #FFFF00); /* グラデーションを追加 */
+  border: 2px solid black; /* 枠線 */
   border-radius: 15px; /* 角丸の形状 */
-  padding: 30px 60px; /* ボタン内の余白 */
-  font-size: 40px; /* フォントサイズ */
+  padding: 15px 30px; /* ボタン内の余白 */
   cursor: pointer; /* マウスオーバー時のカーソルをポインタに */
   transition: background-color 0.3s ease; /* 背景色の変化にトランジションを適用 */
+
   position: absolute; /* 絶対位置指定 */
   left: 15%; /* 画面の左側からの位置 */
   bottom: 30%; /* 画面の下側からの位置 */
   z-index: 3; /* 背景よりも背面に表示 */
-  /* animation: shake 0.5s ease infinite; /* アニメーションを適用 */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), inset 0px 0px 5px rgba(255, 255, 255, 0.8); /* 内側と外側に影を追加 */
+  /*animation: shake 0.5s ease infinite; /* アニメーションを適用 */  
+}
+
+.start-button:hover {
+  transform: translateY(-3px); /* ホバー時に少し持ち上げる */
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5), inset 0px 0px 7px rgba(255, 255, 255, 0.9); /* ホバー時に影を強調 */
 }
 
 /* 揺れるアニメーションの定義 */
@@ -76,7 +89,7 @@ export default {
   position: absolute;
   right: -10%; /* 位置を調整 */
   bottom: 15%; /* 位置を調整 */
-  width: 60%; /* 画像のサイズを調整 */
+  width: 65%; /* 画像のサイズを調整 */
   z-index: 3; /* 背景よりも背面に表示 */
 }
 
@@ -112,4 +125,14 @@ export default {
   }
 }
 
+</style>
+
+<style>
+/* html, body の高さを100%に設定 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* 画面全体のスクロールを無効化 */
+}
 </style>
