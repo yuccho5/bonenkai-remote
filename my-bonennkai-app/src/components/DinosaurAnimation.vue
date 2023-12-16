@@ -60,7 +60,7 @@ export default {
   bottom: 30%; /* 画面の下側からの位置 */
   z-index: 3; /* 背景よりも背面に表示 */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), inset 0px 0px 5px rgba(255, 255, 255, 0.8); /* 内側と外側に影を追加 */
-  /*animation: shake 0.5s ease infinite; /* アニメーションを適用 */  
+  animation: hoverEffect 2s ease-in-out infinite; /* アニメーションを適用 */
 }
 
 .start-button:hover {
@@ -68,19 +68,14 @@ export default {
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5), inset 0px 0px 7px rgba(255, 255, 255, 0.9); /* ホバー時に影を強調 */
 }
 
-/* 揺れるアニメーションの定義 */
-@keyframes shake {
+@keyframes hoverEffect {
   0%, 100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
-  25% {
-    transform: translateX(-3px);
-  }
-  75% {
-    transform: translateX(3px);
+  50% {
+    transform: translateY(-10px); /* 中間点でボタンを少し持ち上げる */
   }
 }
-
 
 .start-button:hover {
   background-color: darkred; /* ホバー時の背景色 */

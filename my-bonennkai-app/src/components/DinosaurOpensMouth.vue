@@ -28,9 +28,6 @@ export default {
     };
   },
   mounted() {
-    // Vue コンポーネントの this を保存
-    // this.nextEgg(); // 口を開く前に次の卵の色に切り替え
-
        // 少し時間を置いてから口を開く
     setTimeout(() => {
       this.openJaw();
@@ -52,7 +49,6 @@ export default {
     },
 
     startEggAnimation() {
-        // eslint-disable-next-line no-unused-vars
       const vm = this;
       anime({
         targets: '.egg',
@@ -71,13 +67,6 @@ export default {
          { value: 3.8, duration: 1000, easing: 'linear' }
          // 元のサイズに戻る
         ],
-       
-        /*rotate: {
-          value: 360,
-          duration: 2000,
-          easing: 'linear'  均一な速さで回転
-       },*/
-        duration: 1500,
 
         complete: function() {
           // キラキラ効果のアニメーションを再生する
