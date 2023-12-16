@@ -115,7 +115,7 @@ export default {
   /*background-image: linear-gradient(to bottom, transparent, black); グラデーションの適用 */
   color: #FFD700; /* フォントカラーを金色 (#FFD700) に設定 */
   /*font-family: 'Sawarabi Mincho', sans-serif; /* Sawarabi Mincho フォントを適用 */
-  font-size: 7.0em; /* フォントサイズを現在の2倍に設定 */
+  font-size: 6.5em; /* フォントサイズを現在の2倍に設定 */
   font-weight: bold; /* フォントを太字に設定 */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* 黒い輪郭を設定 */
   white-space: nowrap; /* テキストを一行に収める */

@@ -115,9 +115,9 @@ export default {
 
 .dinosaur-container {
   position: absolute;
-  right: -5%; /* 位置を調整 */
-  bottom: 14.5%; /* 位置を調整 */
-  width: 57vw; /* コンテナの幅をビューポート幅の60%に設定 */
+  right: -5.1%; /* 位置を調整 */
+  bottom: 14.4%; /* 位置を調整 */
+  width: 56.5vw; /* コンテナの幅をビューポート幅の60%に設定 */
   z-index: 4; /* z-indexを調整 */
 }
 
