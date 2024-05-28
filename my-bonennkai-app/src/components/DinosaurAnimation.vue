@@ -139,7 +139,7 @@ export default {
 
 @media (max-width: 480px) {
   .fixed-container {
-    bottom: 20%;
+    bottom: 32%;
   }
 
   .start-button {

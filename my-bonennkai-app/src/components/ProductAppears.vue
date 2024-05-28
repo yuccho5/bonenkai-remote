@@ -73,9 +73,9 @@ export default {
 
 .dinosaur {
   position: absolute;
-  right: -10%; /* 位置を調整 */
-  bottom: 15%; /* 位置を調整 */
-  width: 65%; /* 画像のサイズを調整 */
+  right: 20%; /* 位置を調整 */
+  bottom: 20%; /* 位置を調整 */
+  width: 57%; /* 画像のサイズを調整 */
   z-index: 2; /* 背景よりも背面に表示 */
   opacity: 0.3; /* 背景画像を暗くする */
 }
@@ -95,8 +95,8 @@ export default {
 
 .product-image {
   z-index: 3; /* 背景より前面に表示 */
-  max-width: 70%; /* 画像の最大幅を設定 */
-  max-height: 70%; /* 画像の最大高さを設定 */
+  max-width: 65%; /* 画像の最大幅を設定 */
+  max-height: 65%; /* 画像の最大高さを設定 */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 光る影を追加 */
   opacity: 0; /* 初期状態では不透明 */
   transform: translateY(-100px); /* 初期状態では下に少しオフセット */
@@ -115,7 +115,7 @@ export default {
   /*background-image: linear-gradient(to bottom, transparent, black); グラデーションの適用 */
   color: #FFD700; /* フォントカラーを金色 (#FFD700) に設定 */
   /*font-family: 'Sawarabi Mincho', sans-serif; /* Sawarabi Mincho フォントを適用 */
-  font-size: 6.5em; /* フォントサイズを現在の2倍に設定 */
+  font-size: 5.5em; /* フォントサイズを現在の2倍に設定 */
   font-weight: bold; /* フォントを太字に設定 */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* 黒い輪郭を設定 */
   white-space: nowrap; /* テキストを一行に収める */
@@ -232,5 +232,53 @@ export default {
 
 .confirm-dialog button:nth-child(2) {
   background-color: rgba(204, 0, 0, ); /* 赤色の背景 */
+}
+
+/* 1024px以下の画面に対するスタイル */
+@media (max-width: 1024px) {
+  .product-image {
+    max-width: 60%; /* 画像の最大幅を調整 */
+    max-height: 60%; /* 画像の最大高さを調整 */
+  }
+  .product-description {
+    font-size: 4.5em; /* フォントサイズを調整 */
+  }
+  .dinosaur {
+    width: 70%; /* 恐竜画像のサイズを調整 */
+    right: 15%; /* 位置を調整 */
+    bottom: 20%; /* 位置を調整 */
+  }
+}
+
+/* 768px以下の画面に対するスタイル */
+@media (max-width: 768px) {
+  .product-image {
+    max-width: 60%; /* 画像の最大幅を調整 */
+    max-height: 60%; /* 画像の最大高さを調整 */
+  }
+  .product-description {
+    font-size: 4.0em; /* フォントサイズを調整 */
+  }
+  .dinosaur {
+    width: 75%; /* 恐竜画像のサイズを調整 */
+    right: 15%; /* 位置を調整 */
+    bottom: 20%; /* 位置を調整 */
+  }
+}
+
+/* 480px以下の画面に対するスタイル */
+@media (max-width: 480px) {
+  .product-image {
+    max-width: 60%; /* 画像の最大幅を調整 */
+    max-height: 60%; /* 画像の最大高さを調整 */
+  }
+  .product-description {
+    font-size: 2.0em; /* フォントサイズを調整 */
+  }
+  .dinosaur {
+    width: 120%; /* 恐竜画像のサイズを調整 */
+    right: -10%; /* 位置を調整 */
+    bottom: 40%; /* 位置を調整 */
+  }
 }
 </style>

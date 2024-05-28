@@ -50,24 +50,50 @@ export default {
 
     startEggAnimation() {
       const vm = this;
-      anime({
+      const isSmallScreen = window.matchMedia("(max-width: 468px)").matches;
+
+          // 画面幅が468px以下の場合のアニメーション設定
+      const smallScreenAnimationSettings = {
         targets: '.egg',
-        translateX:[ 
-         { value: '-35vw', duration: 2250, easing: 'easeInOutQuad' } //  
+        translateX: [ 
+          { value: '-20vw', duration: 2000, easing: 'easeInOutQuad' }
         ],
         translateY: [
-         { value: '-5vh', duration: 1000, easing: 'easeInOutQuad' },
-         { value: '25vh', duration: 1250, easing: 'easeInOutQuad' } // 最初に上に飛び出す
-        // { value: 170, duration: 200, easing: 'easeOutCubic' },
-        // { value: 200, duration: 150, easing: 'linear' }
+          { value: '-10vh', duration: 800, easing: 'easeInOutQuad' },
+          { value: '30vh', duration: 1200, easing: 'easeInOutQuad' }
         ],
         scale: [
-         { value: 1.5, duration: 500, easing: 'linear' },
-         { value: 2.5, duration: 750, easing: 'linear' },
-         { value: 3.5, duration: 1000, easing: 'linear' }
-         // 元のサイズに戻る
-        ],
+          { value: 1.5, duration: 400, easing: 'linear' },
+          { value: 2, duration: 600, easing: 'linear' },
+          { value: 2.5, duration: 800, easing: 'linear' }
+        ]
+      };
 
+
+      // 画面幅が468pxより大きい場合のアニメーション設定
+      const defaultAnimationSettings = {
+        targets: '.egg',
+        translateX: [ 
+          { value: '-20vw', duration: 1916, easing: 'easeInOutQuad' }
+        ],
+        translateY: [
+          { value: '-10vh', duration: 740, easing: 'easeInOutQuad' },
+          { value: '30vh', duration: 1176, easing: 'easeInOutQuad' }
+        ],
+        scale: [
+          { value: 1.5, duration: 400, easing: 'linear' },
+          { value: 2, duration: 600, easing: 'linear' },
+          { value: 2.5, duration: 800, easing: 'linear' }
+         // 元のサイズに戻る
+        ]
+      };
+
+      // 画面幅に応じて適切なアニメーション設定を選択
+      const animationSettings = isSmallScreen ? smallScreenAnimationSettings : defaultAnimationSettings;
+
+       // anime.jsを使用してアニメーションを開始
+      anime({
+        ...animationSettings,
         complete: function() {
           // キラキラ効果のアニメーションを再生する
           const sparkleEffect = document.querySelector('.sparkle-effect');
@@ -76,12 +102,13 @@ export default {
           // アニメーションが完了したら少し待ってからイベントを発火
           setTimeout(() => {
             vm.$emit('animation-finished');
-          }, 300); // 1秒（1000ミリ秒）の遅延
-        }
+          }, 300); // 300ミリ秒の遅延
+       }
      });
     }
   }
-};
+}
+        
 
 </script>
 
@@ -181,9 +208,9 @@ html, body {
 
 @media (max-width: 768px) {
   .dinosaur-container {
-    width: 80vw;
+    width: 70vw;
     right: -5%;
-    bottom: 35%;
+    bottom: 20%;
   }
 
   .non-mouth {
@@ -193,7 +220,7 @@ html, body {
   }
 
   .lower-jaw {
-    width: 57vw;
+    width: 52vw;
     bottom: 100;
     right: 1000;
   }
@@ -203,9 +230,9 @@ html, body {
   }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   .dinosaur-container {
-    width: 95vw;
+    width: 100vw;
     right: -10%;
     bottom: 40%;
   }
@@ -217,13 +244,13 @@ html, body {
   }
 
   .lower-jaw {
-    width: 67vw;
+    width: 72vw;
     bottom: 100;
     right: 1000;
   }
 
   .egg {
-    width: 20vw;
+    width: 25vw;
   }
 }
 </style>
