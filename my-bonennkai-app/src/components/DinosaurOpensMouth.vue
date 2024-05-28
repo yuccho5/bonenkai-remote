@@ -64,7 +64,7 @@ export default {
         scale: [
          { value: 1.5, duration: 500, easing: 'linear' },
          { value: 2.5, duration: 750, easing: 'linear' },
-         { value: 3.8, duration: 1000, easing: 'linear' }
+         { value: 3.5, duration: 1000, easing: 'linear' }
          // 元のサイズに戻る
         ],
 
@@ -86,6 +86,17 @@ export default {
 </script>
 
 <style scoped>
+/* CSSリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 .animation-container {
   position: relative;
   width: 100vw; /* コンテナの幅をビューポート幅に設定 */
@@ -143,15 +154,6 @@ export default {
   opacity: 1; /* 卵が見える状態 */
 }
 
-@media (max-width: 600px) {
-  .non-mouth, .lower-jaw {
-    width: 70vw; /* スマートフォン表示で画像の幅を変更 */
-  }
-  .egg {
-    width: 15vw; /* スマートフォン表示で卵の画像の幅を変更 */
-  }
-}
-
 .sparkle-effect {
   position: fixed;
   top: 0;
@@ -174,6 +176,54 @@ export default {
   }
   100% {
     background: rgba(255, 255, 255, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .dinosaur-container {
+    width: 80vw;
+    right: -5%;
+    bottom: 35%;
+  }
+
+  .non-mouth {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  .lower-jaw {
+    width: 57vw;
+    bottom: 100;
+    right: 1000;
+  }
+
+  .egg {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 468px) {
+  .dinosaur-container {
+    width: 95vw;
+    right: -10%;
+    bottom: 40%;
+  }
+
+  .non-mouth {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  .lower-jaw {
+    width: 67vw;
+    bottom: 100;
+    right: 1000;
+  }
+
+  .egg {
+    width: 20vw;
   }
 }
 </style>
