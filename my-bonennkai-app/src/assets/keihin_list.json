@@ -179,13 +179,6 @@
       "eggColor": "egg/egg.png",
       "imagePath": "N_card/N_humidifier.png",
       "description": "④⑪卓上加湿器"
-    },
-
-    {
-        "id": 27,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_starbucks_cards.png",
-        "description": "③㉟スタバカード"
-      }
+    }
 
 ]
