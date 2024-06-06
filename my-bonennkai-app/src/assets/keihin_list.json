@@ -1,184 +1,37 @@
 [
     {
         "id": 1,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_light.png",
-        "description": "⑦⑭㉝卓上ライト"
+        "eggColor": "egg/egg_gold.png",
+        "imagePath": "SR_card/bear_SR.jpg",
+        "description": ""
     },
 
     {
         "id": 2,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_amazon_card_white_porch.png",
-        "description": "㉒アマゾンギフトカード"
+        "eggColor": "egg/egg.png",
+        "imagePath": "N_card/rabbit_N.jpg",
+        "description": ""
     },
 
     {
         "id": 3,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tea_crown.png",
-        "description": "⑤紅茶セット"
+        "eggColor": "egg/egg_sliver.png",
+        "imagePath": "R_card/wolf_R.jpg",
+        "description": ""
     },
 
     {
         "id": 4,
         "eggColor": "egg/egg_gold.png",
-        "imagePath": "SR_card/SR_muffler_black.png",
-        "description": "㊳マフラー（黒）"
+        "imagePath": "SSR_card/lion_SRR.jpg",
+        "description": ""
     },
 
     {
         "id": 5,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tumbler.png",
-        "description": "⑱㉞タンブラー"
-    },
-
-    {
-        "id": 6,
         "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_earphone.png",
-        "description": "㊱ワイヤレスイヤホン"
-    },
-
-    {
-        "id": 7,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_amazon_card_white_porch.png",
-        "description": "⑳アマゾンギフトカード"
-    },
-
-    {
-        "id": 8,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_loudspeaker.png",
-        "description": "⑥スピーカー"
-    },
-
-    {
-        "id": 9,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_Sweets.png",
-        "description": "⑧⑩⑫㉔㉜お菓子セット"
-    },
-
-    {
-        "id": 10,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_cushion_beige.png",
-        "description": "㉛マッサージクッション"
-    },
-
-    {
-        "id": 11,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tea_musibi.png",
-        "description": "㉚緑茶セット"
-    },
-
-    {
-        "id": 12,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_towel_white.png",
-        "description": "⑲㉗㉙育てるタオル"
-    },
-
-    {
-        "id": 13,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_amazon_card_white_porch.png",
-        "description": "①アマゾンギフトカード"
-    },
-
-    {
-        "id": 14,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tea_Rooibos.png",
-        "description": "⑮ルイボスティーセット"
-    },
-
-    {
-        "id": 15,
-        "eggColor": "egg/egg_gold.png",
-        "imagePath": "SR_card/SR_Carbonated-water.png",
-        "description": "㉑炭酸水メーカー"
-    },
-
-    {
-        "id": 16,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_cushion_black.png",
-        "description": "⑯マッサージクッション"
-    },
-
-    {
-        "id": 17,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_amazon_card_white_porch.png",
-        "description": "②アマゾンギフトカード"
-    },
-
-    {
-        "id": 18,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tea_nukumori.png",
-        "description": "㉖烏龍茶セット"
-    },
-
-    {
-        "id": 19,
-        "eggColor": "egg/egg_gold.png",
-        "imagePath": "SR_card/SR_muffler_grey.png",
-        "description": "⑨マフラー（グレー）"
-    },
-
-    {
-        "id": 20,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_Charger.png",
-        "description": "㉓目覚まし充電器"
-    },
-
-    {
-        "id": 21,
-        "eggColor": "egg/egg_gold.png",
-        "imagePath": "SR_card/SR_Carbonated-water.png",
-        "description": "⑰炭酸水メーカー"
-    },
-  
-    {
-      "id": 22,
-      "eggColor": "egg/egg_gold.png",
-      "imagePath": "SSR_card/SSR_Este.png",
-      "description": "⑬目元エステ"
-    },
-
-    {
-        "id": 23,
-        "eggColor": "egg/egg_sliver.png",
-        "imagePath": "R_card/R_amazon_card_white_porch.png",
-        "description": "㊲アマゾンギフトカード"
-    },
-
-    {
-        "id": 24,
-        "eggColor": "egg/egg.png",
-        "imagePath": "N_card/N_tea_tsukiakari.png",
-        "description": "㉘紅茶セット"
-    },
-  
-    {
-        "id": 25,
-        "eggColor": "egg/egg_gold.png",
-        "imagePath": "SR_card/SR_Shower-head.png",
-        "description": "㉕シャワーヘッド"
-    },   
-
-    {
-      "id": 26,
-      "eggColor": "egg/egg.png",
-      "imagePath": "N_card/N_humidifier.png",
-      "description": "④⑪卓上加湿器"
+        "imagePath": "R_card/wolf_ver2_R.jpg",
+        "description": ""
     }
 
 ]
